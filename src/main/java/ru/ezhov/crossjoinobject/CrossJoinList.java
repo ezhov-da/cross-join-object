@@ -56,8 +56,7 @@ public final class CrossJoinList<T> {
                                         for (int i1 = 1; i1 < arrayResult.length; i1++) {
                                             arrayResult[i1] = array[i1 - 1];
                                         }
-                                        ObjectCrossJoin<T> objectCrossJoin = new ObjectCrossJoin<>(arrayResult);
-                                        return objectCrossJoin;
+                                        return new ObjectCrossJoin<>(arrayResult);
                                     })
                             ).collect(Collectors.toList());
                 }
